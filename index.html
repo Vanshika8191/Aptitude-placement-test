@@ -1,0 +1,201 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Practice aptitude, reasoning and verbal tests with PlacePrep.">
+    <title>PlacePrep | Placement Preparation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <nav>
+            <a href="#home" class="logo">
+                <span class="logo-icon">◆</span>
+                Placement<span>Preparation</span>
+            </a>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#tests">Tests</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-decoration hero-left">✦</div>
+            <div class="hero-decoration hero-right">✧</div>
+
+            <div class="hero-content">
+                <span class="eyebrow">YOUR JOURNEY TO SUCCESS</span>
+                <h1>Crack Your <span>Placement Test</span></h1>
+                <p>Practice Quantitative Aptitude, Logical Reasoning and Verbal Ability for TCS, Infosys, Wipro and more.</p>
+                <button id="start-practice" class="primary-btn">
+                    Start Practice <span>→</span>
+                </button>
+                <div class="hero-stats">
+                    <div><strong>03</strong><small>Test Categories</small></div>
+                    <div><strong>60</strong><small>Practice Questions</small></div>
+                    <div><strong>100%</strong><small>Focus on Growth</small></div>
+                </div>
+            </div>
+
+            <div class="hero-illustration" aria-hidden="true">
+                <div class="orbit orbit-one"></div>
+                <div class="orbit orbit-two"></div>
+                <div class="book book-one"></div>
+                <div class="book book-two"></div>
+                <div class="book book-three"></div>
+                <div class="graduation-cap">🎓</div>
+                <div class="floating-star">✦</div>
+            </div>
+        </section>
+
+        <section id="tests" class="tests-section">
+            <div class="section-heading">
+                <span class="eyebrow">CHOOSE YOUR CHALLENGE</span>
+                <h2>Select Test <span>Category</span></h2>
+                <p>Build your skills one question at a time.</p>
+            </div>
+
+            <div class="test-grid">
+                <article class="test-card quant-card">
+                    <div class="card-top">
+                        <div class="category-icon">∑</div>
+                        <span class="level-badge">APTITUDE</span>
+                    </div>
+                    <h3>Quantitative Aptitude</h3>
+                    <p>Improve your calculation skills and solve numerical problems faster.</p>
+                    <div class="card-info">
+                        <span>▤ 20 Questions</span>
+                        <span>◷ 30 Minutes</span>
+                    </div>
+                    <p class="topics">Profit & Loss · Percentage · Time & Speed</p>
+                    <button class="category-btn" data-category="quant">Start Quant Test <span>→</span></button>
+                </article>
+
+                <article class="test-card reasoning-card">
+                    <div class="card-top">
+                        <div class="category-icon">⌘</div>
+                        <span class="level-badge">LOGIC</span>
+                    </div>
+                    <h3>Logical Reasoning</h3>
+                    <p>Sharpen your analytical thinking and problem-solving abilities.</p>
+                    <div class="card-info">
+                        <span>▤ 20 Questions</span>
+                        <span>◷ 30 Minutes</span>
+                    </div>
+                    <p class="topics">Directions · Blood Relations · Series</p>
+                    <button class="category-btn" data-category="reasoning">Start Reasoning Test <span>→</span></button>
+                </article>
+
+                <article class="test-card verbal-card">
+                    <div class="card-top">
+                        <div class="category-icon">Aa</div>
+                        <span class="level-badge">LANGUAGE</span>
+                    </div>
+                    <h3>Verbal Ability</h3>
+                    <p>Strengthen your English vocabulary, grammar and comprehension.</p>
+                    <div class="card-info">
+                        <span>▤ 20 Questions</span>
+                        <span>◷ 20 Minutes</span>
+                    </div>
+                    <p class="topics">Synonyms · Grammar · Vocabulary</p>
+                    <button class="category-btn" data-category="verbal">Start Verbal Test <span>→</span></button>
+                </article>
+            </div>
+        </section>
+
+        <section id="quiz" class="quiz-panel" hidden>
+            <div class="quiz-header">
+                <div>
+                    <span class="eyebrow">YOUR TEST IS IN PROGRESS</span>
+                    <h2 id="quiz-category">Quantitative Aptitude</h2>
+                </div>
+                <div class="quiz-metrics">
+                    <div class="metric">
+                        <span>TIME LEFT</span>
+                        <strong id="timer">30:00</strong>
+                    </div>
+                    <div class="metric">
+                        <span>QUESTION</span>
+                        <strong><span id="current-q">1</span> / <span id="total-q">20</span></strong>
+                    </div>
+                </div>
+            </div>
+
+            <div class="progress-track">
+                <div id="progress-bar"></div>
+            </div>
+
+            <form id="quiz-form">
+                <div class="question-meta">
+                    <span id="question-number">QUESTION 01</span>
+                    <span>Choose one answer</span>
+                </div>
+
+                <fieldset>
+                    <legend id="question-text">Your question will appear here.</legend>
+                    <div id="options-container" class="options-list"></div>
+                </fieldset>
+
+                <div class="quiz-footer">
+                    <button type="button" id="prev-btn" class="secondary-btn">← Previous</button>
+                    <span id="answered-count">0 answered</span>
+                    <button type="button" id="next-btn" class="primary-btn">Next →</button>
+                    <button type="submit" id="submit-btn" class="submit-btn">Submit Test ✓</button>
+                </div>
+            </form>
+        </section>
+
+        <section id="result" class="result-panel" hidden>
+            <div class="result-icon">🏆</div>
+            <span class="eyebrow">TEST COMPLETED</span>
+            <h2>Your Results Are In!</h2>
+            <p id="result-category">Quantitative Aptitude</p>
+
+            <div class="score-circle" id="score-circle">
+                <div>
+                    <strong id="score">0</strong>
+                    <span>out of <span id="total-score">20</span></span>
+                </div>
+            </div>
+
+            <h3 id="result-message">Keep learning!</h3>
+            <p id="result-percentage">You scored 0%.</p>
+
+            <div class="result-stats">
+                <div><strong id="correct-count">0</strong><span>Correct</span></div>
+                <div><strong id="wrong-count">0</strong><span>Incorrect</span></div>
+                <div><strong id="unanswered-count">0</strong><span>Unanswered</span></div>
+            </div>
+
+            <div class="result-actions">
+                <button type="button" id="review-btn" class="secondary-btn">Review Answers</button>
+                <button type="button" id="restart-btn" class="primary-btn">↻ Try Again</button>
+                <button type="button" id="home-btn" class="secondary-btn">⌂ Home</button>
+            </div>
+
+            <div id="review-section" hidden>
+                <h3 class="review-heading">Answer Review</h3>
+                <div id="review-list"></div>
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <span class="eyebrow">ABOUT PLACEPREP</span>
+            <h2>Your Placement Journey <span>Starts Here</span></h2>
+            <p>PlacePrep helps students practise essential aptitude, reasoning and verbal skills for placement assessments. Practice regularly, learn from mistakes and track your progress.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 PlacePrep. Built for your placement success.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
